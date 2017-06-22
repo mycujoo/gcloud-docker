@@ -1,3 +1,3 @@
 FROM sbani/google-gloud-sdk:latest
 
-RUN apk add docker tar --update
+RUN apk add jq docker tar --update
