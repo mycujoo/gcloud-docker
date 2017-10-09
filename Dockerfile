@@ -2,7 +2,7 @@ FROM sbani/google-gloud-sdk:latest
 
 RUN echo "@testing http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
      apk update && \
-     apk add jq docker tar consul-template@testing nodejs bash openssl postgresql mariadb-client
+     apk add jq docker tar consul-template@testing nodejs bash openssl postgresql mariadb-client git
 
 # Install HELM
 RUN bash -c "$(curl -sS https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get)"
