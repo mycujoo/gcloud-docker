@@ -1,4 +1,4 @@
-FROM sbani/google-gloud-sdk:latest
+FROM google/cloud-sdk:alpine
 
 RUN echo "@testing http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
      apk update && \
