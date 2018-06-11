@@ -1,5 +1,7 @@
 FROM google/cloud-sdk:alpine
 
+RUN gcloud components install kubectl
+
 RUN echo "@testing http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
      apk update && \
      apk add jq docker tar consul-template@testing nodejs bash openssl postgresql mariadb-client git py-pip
