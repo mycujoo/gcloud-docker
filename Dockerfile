@@ -6,9 +6,11 @@ RUN gcloud components install kubectl
 
 RUN echo "@testing http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
      apk update && \
-     apk add --no-cache make gcc g++ python jq docker tar consul-template@testing nodejs nodejs-npm bash openssl postgresql mariadb-client git py-pip
+     apk add --no-cache make gcc g++ python jq docker tar consul-template@testing nodejs nodejs-npm bash openssl postgresql mariadb-client git py-pip wget
 
 RUN pip install docker-compose
+
+RUN wget https://s3.eu-central-1.amazonaws.com/binary-distribution/kube-deploy-linux-amd64 -O /usr/local/bin/kube-deploy && chmod +x /usr/local/bin/kube-deploy
 
 ADD https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_linux_amd64.zip /tmp
 
