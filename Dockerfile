@@ -2,7 +2,7 @@ FROM google/cloud-sdk:alpine
 
 ENV VAULT_VERSION=0.11.0
 
-RUN gcloud components install kubectl
+RUN gcloud components install kubectl --quiet
 
 RUN echo "@testing http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
      apk update && \
