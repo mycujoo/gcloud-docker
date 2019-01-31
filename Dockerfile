@@ -6,7 +6,7 @@ RUN gcloud components install kubectl
 
 RUN echo "@testing http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
      apk update && \
-     apk add --no-cache make gcc g++ python jq docker tar consul-template@testing nodejs nodejs-npm bash openssl postgresql mariadb-client git py-pip
+     apk add --no-cache make gcc g++ python jq docker tar consul-template@testing nodejs nodejs-npm yarn bash openssl postgresql mariadb-client git py-pip
 
 RUN pip install docker-compose
 
