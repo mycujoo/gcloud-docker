@@ -8,7 +8,7 @@ RUN echo "@testing http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/re
      apk update && \
      apk add --no-cache make gcc g++ python jq docker tar consul-template@testing nodejs nodejs-npm bash openssl postgresql mariadb-client git py-pip
 
-RUN pip install docker-compose
+RUN pip install docker-compose~=1.23.0
 
 ADD https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_linux_amd64.zip /tmp
 
