@@ -1,8 +1,8 @@
 FROM google/cloud-sdk:alpine
 
-ENV VAULT_VERSION=1.5.3
+ENV VAULT_VERSION=1.5.4
 
-RUN gcloud components install kubectl
+RUN gcloud components install kubectl beta
 
 RUN apk update && \
     apk add --no-cache make gcc g++ python jq docker tar nodejs nodejs-npm bash openssl postgresql mariadb-client git
