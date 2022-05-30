@@ -5,7 +5,7 @@ ENV VAULT_VERSION=1.5.4
 RUN gcloud components install kubectl beta
 
 RUN apk update && \
-    apk add --no-cache make gcc g++ jq python2 docker tar nodejs nodejs-npm bash openssl postgresql mariadb-client git
+    apk add --no-cache make gcc g++ jq python2 docker tar nodejs nodejs-npm bash openssl postgresql mariadb-client git consul-template
 
 ADD https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_linux_amd64.zip /tmp
 
